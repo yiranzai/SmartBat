@@ -151,4 +151,6 @@ netsh wlan set hostednetwork mode=allow
 netsh wlan start hostednetwork
 netsh wlan start settings
 netsh wlan start hostednetwork
-exit
+echo 请按任意键返回主界面...
+pause>nul
+goto main
