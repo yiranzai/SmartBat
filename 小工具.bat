@@ -123,7 +123,7 @@ echo ##                        关闭热点		--2
 echo ##                        自定义创建热点	--3                        
 echo ##                        一键创建热点  	--4              	   
 echo ##									   
-echo ##						9:退出	0:返回             
+echo ##						q:退出	0:返回             
 echo ##    一键创建将默认建立SSID为DzxWifi密码aaaa0000的热点并退出本程序。 
 echo ##                                                                    
 echo ########################################################################
@@ -137,7 +137,7 @@ if "%opWifi%"=="1" goto openWifi
 if "%opWifi%"=="2" goto closeWifi
 if "%opWifi%"=="3" goto setWifi
 if "%opWifi%"=="4" goto onekeyWifi
-if "%opWifi%"=="9" goto exit
+if "%opWifi%"=="q" goto exit
 if "%opWifi%"=="0" goto main
 cls
 goto wifi
@@ -202,13 +202,13 @@ echo ##
 echo ##                        切换为静态IP	--1	                   
 echo ##                        切换为动态IP	--2	                   
 echo ##									   
-echo ##						9:退出	0:返回            
+echo ##						q:退出	0:返回            
 echo ########################################################################
 set /p opip=请输入相应选项，输入q则退出：
 @echo off
 if "%opip%"=="1" goto staticip
 if "%opip%"=="2" goto dhcpip
-if "%opip%"=="9" goto exit
+if "%opip%"=="q" goto exit
 if "%opip%"=="0" goto main
 cls
 goto ipset
@@ -250,13 +250,13 @@ echo ##
 echo ##				关闭小程序	--1                        
 echo ##				开启小程序	--2                        
 echo ##									   
-echo ##						9:退出	0:返回             
+echo ##						q:退出	0:返回             
 echo ########################################################################
 set /p opexes=请输入相应选项，输入q则退出：
 @echo off
 if "%opexes%"=="1" goto exeStart
 if "%opexes%"=="2" goto exeClose
-if "%opexes%"=="9" goto exit
+if "%opexes%"=="q" goto exit
 if "%opexes%"=="0" goto main
 cls
 goto exes
